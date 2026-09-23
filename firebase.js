@@ -4,7 +4,7 @@ import { getFirestore } from "firebase/firestore";
 import { getStorage } from "firebase/storage";
 
 const firebaseConfig = {
-  apiKey: "AIzaSy...", // ⚠️ Remplacez AIzaSy... par votre vraie apiKey copiée depuis la console Firebase
+  apiKey: "AIzaSyC_VOTRE_VRAIE_CLE_ICI",
   authDomain: "signalisation-et-orpaillage.firebaseapp.com",
   projectId: "signalisation-et-orpaillage",
   storageBucket: "signalisation-et-orpaillage.appspot.com",
