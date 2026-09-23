@@ -1,31 +1,15 @@
 import Head from "next/head";
-import styles from "../styles/Home.module.css";
-import ContactForm from "../components/contact-form";
 
 export default function Home() {
   return (
-    <div className={styles.container}>
+    <div style={{ padding: "20px", fontFamily: "sans-serif", textAlign: "center" }}>
       <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
+        <title>Vigie Civique 🇨🇮</title>
       </Head>
 
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-
-        <p className={styles.description}>
-          Get started by editing{" "}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
-
-        <div className={styles.grid}>
-          <div className={styles.card}>
-            <h3>Contact Us</h3>
-            <ContactForm />
-          </div>
-        </div>
+      <main>
+        <h1>Vigie Civique 🇨🇮</h1>
+        <p>Plateforme de signalement et de suivi civique.</p>
       </main>
     </div>
   );
