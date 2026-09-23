@@ -1,34 +1,31 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+import Head from "next/head";
+import styles from "../styles/Home.module.css";
+import ContactForm from "../components/contact-form";
 
-# dependencies
-/node_modules
-/.pnp
-.pnp.js
+export default function Home() {
+  return (
+    <div className={styles.container}>
+      <Head>
+        <title>Signalisation & Orpaillage - Côte d'Ivoire</title>
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
 
-# testing
-/coverage
+      <main className={styles.main}>
+        <h1 className={styles.title}>
+          Plateforme de Signalisation
+        </h1>
 
-# next.js
-/.next/
-/out/
+        <p className={styles.description}>
+          Application de suivi et de signalement de l'orpaillage
+        </p>
 
-# production
-/build
-
-# misc
-.DS_Store
-*.pem
-
-# debug
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-
-# local env files
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
-
-# vercel
-.vercel
+        <div className={styles.grid}>
+          <div className={styles.card}>
+            <h3>Formulaire de Signalement</h3>
+            <ContactForm />
+          </div>
+        </div>
+      </main>
+    </div>
+  );
+}
