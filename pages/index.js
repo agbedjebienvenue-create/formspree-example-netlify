@@ -1,3 +1,17 @@
+  const fetchSignalements = async () => {
+    try {
+      // 1. Récupération sans le orderBy dans la requête Firebase
+      const querySnapshot = await getDocs(collection(db, "signalements"));
+      const docs = querySnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
+      
+      // 2. Tri par date du plus récent au plus ancien en Javascript
+      docs.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
+      
+      setSignalements(docs);
+    } catch (error) {
+      console.error("Erreur lors de la récupération :", error);
+    }
+  };
 import Head from "next/head";
 import { useState, useEffect } from "react";
 import { db, storage } from "../firebase";
